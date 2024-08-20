@@ -10,7 +10,7 @@ Firsrt diatlak sjdflkjsldkf <br>
 skdljfosidjf osijdf 
 <p>This is the first entry.<br>It has multiple lines.<br>And even some <strong>bold text</strong>.</p>
 <p>This is the second entry.<br><em>It has italics</em> and a list:</p>
-<ul>
+<ul> 
     <li>Item one</li>
     <li>Item two</li>
     <li>Item three</li>
