@@ -268,7 +268,7 @@ a:link, a:visited {
 /*page specific*/
 
 .index-grid{
-    height: 100%;
+    height: 97%;
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-columns: 25% 25% 25% 25%;
@@ -368,13 +368,14 @@ button:hover {
 .searchbar{
     float: right;
     margin-top:-45px;
+    margin-right:10px;
 }
 input[type="text"] {
     padding: 10px;
     padding-top:5px;
     padding-bottom:5px;
     font-size: 12px;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 1px solid #000000;
     width:230px;
 }
@@ -386,4 +387,26 @@ input[type="text"]:focus{
 } 
 .diary-entry.highlight {
     background-color: rgb(100, 100, 255);
+}
+
+.bio{
+    grid-column: 2/ span 3;
+    grid-row: 1/span 2;
+    border: solid red;   
+}
+.image-1{
+    grid-column: 1;
+    grid-row: 1/span 2;
+    border: solid red;
+}
+.image-2{
+    grid-column: 3/ span 2;
+    grid-row: 4;
+    border: solid red;
+}
+.updateLog{
+    grid-column: 1/ span 2;
+    grid-row: 3/span 2;
+    border: solid red;
+    border-radius:25px;
 }
