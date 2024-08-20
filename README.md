@@ -1,0 +1,2 @@
+# CyberK
+A static website
