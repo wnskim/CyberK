@@ -120,29 +120,33 @@ function loadAndScrollToEntry(entryId) {
 
 // Function to convert UTC date to EST and format it
 function convertToEST(utcDateStr) {
-    // Parse the UTC date string into a Date object
-    const utcDate = new Date(utcDateStr);
+    // Create a Date object from the UTC date string
+    let date = new Date(utcDateStr);
 
-    // Convert to EST time zone
-    const estOffset = -5 * 60; // EST is UTC-5
-    const estDate = new Date(utcDate.getTime() + estOffset * 60 * 1000);
+    // Convert to EST by subtracting the offset (5 hours for standard time, 4 hours for daylight saving time)
+    // Note: Use -5 for EST or -4 for EDT, depending on whether daylight saving time is in effect
+    let offset = -5; // This will change depending on whether daylight saving time is active or not.
+    let estDate = new Date(date.getTime() + offset * 60 * 60 * 1000);
 
-    // Format date as 'Month Day, Year (Day) HH:MM'
-    const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'short',
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: 'America/New_York'
-    };
-    
-    const formattedDate = estDate.toLocaleString('en-US', options);
+    // Format the date components
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    // Adjust for formatting to match 'Month Day, Year (Day) HH:MM'
-    return formattedDate.replace(',', '').replace(/(\d{1,2} \w+ \d{4}) (\w{3})/, '$1 ($2)');
+    let month = months[estDate.getUTCMonth()];
+    let day = estDate.getUTCDate();
+    let year = estDate.getUTCFullYear();
+    let weekday = weekdays[estDate.getUTCDay()];
+
+    let hours = estDate.getUTCHours().toString().padStart(2, '0');
+    let minutes = estDate.getUTCMinutes().toString().padStart(2, '0');
+
+    // Construct the formatted date string
+    let formattedDate = `${month} ${day} ${year} (${weekday}) ${hours}:${minutes}`;
+
+    return formattedDate;
 }
+
+
 
 // Function to fetch and display RSS updates
 async function fetchRSSUpdates() {
@@ -160,7 +164,7 @@ async function fetchRSSUpdates() {
         const updateLog = document.getElementById('update-log');
 
         // Create HTML for each item
-        let html = '';
+        let html = '<div style="margin-top:20px;margin-bottom:20px;font-family:neuropol;font-size:25px;text-align:center;color:#ffffff;text-shadow:0 0 3px #ffffff,0 0 7px #ffffff,0 0 10px #ffffff;">Update Log&nbsp;<a href="https://cyberk.neocities.org/rss.xml"><img src="/media/rss.png" alt="rss button" style="color: white; height:20px;border-radius:5px;"></a></div>';
         Array.from(items).forEach(item => {
             const title = item.getElementsByTagName('title')[0].textContent;
             const link = item.getElementsByTagName('link')[0].textContent;
@@ -171,9 +175,7 @@ async function fetchRSSUpdates() {
             const pubDateEST = convertToEST(pubDateUTC);
 
             html += `<div class="rss-item">
-                        <h3><a href="${link}" target="_blank">${title}</a></h3>
-                        <p><strong>Date Published:</strong> ${pubDateEST}</p>
-                        <p>${description}</p>
+                        <li style="color:#ffffff; margin-top:10px;">${pubDateEST}<br><span style="color:#ffffff;">${description}</span></li>
                      </div>`;
         });
 
