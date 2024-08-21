@@ -9,8 +9,8 @@
 
         <item>
             <title>First Blog Post</title>
-            <link>https://www.myblog.com/first-post</link>
-            <description><![CDATA[Deployed the <a href="/index.html">Website</a>]]></description>
+            <link>https://www.cyberk.neocities.org</link>
+            <description><![CDATA[Deployed the <a href="/index.html">Website</a>.]]></description>
             <guid>1724240926 </guid> <!--https://www.epochconverter.com/-->
             <pubDate>Thu, 21 Aug 2024 12:44:00 GMT</pubDate> <!--add 5 hours-->
         </item>
