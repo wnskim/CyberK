@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>Cyber K</title>
-        <link>https://cyberk.neocities.org/</link>
+        <link>https://cyberk.neocities.org</link>
         <description>Updates and latest posts from Cyber K.</description>
         <language>en-us</language>
         <ttl>60</ttl> <!-- Time to Live in minutes -->
@@ -10,6 +10,13 @@
         <item>
             <title>First Blog Post</title>
             <link>https://www.cyberk.neocities.org</link>
+            <description><![CDATA[Deployed the <a href="/index.html">Website</a>.]]></description>
+            <guid>1724240926 </guid> <!--https://www.epochconverter.com/-->
+            <pubDate>Thu, 21 Aug 2024 12:44:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>indexbruh</title>
+            <link>/index.html</link>
             <description><![CDATA[Deployed the <a href="/index.html">Website</a>.]]></description>
             <guid>1724240926 </guid> <!--https://www.epochconverter.com/-->
             <pubDate>Thu, 21 Aug 2024 12:44:00 GMT</pubDate> <!--add 5 hours-->
