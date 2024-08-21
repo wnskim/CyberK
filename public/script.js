@@ -1,11 +1,8 @@
+const ENTRIES_PER_PAGE = 10;
+let currentIndex = 0;
+let diaryEntries = [];
+let filteredEntries = [];
 
-
-    
-    const ENTRIES_PER_PAGE = 10;
-    let currentIndex = 0;
-    let diaryEntries = [];
-    let filteredEntries = [];
-    
 document.addEventListener("DOMContentLoaded", function() {
     // Function to fetch quotes from the text file
     function fetchQuotes() {
@@ -20,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return quotes[randomIndex];
     }
 
-
     // Fetch quotes and replace the text in .footer
     fetchQuotes().then(quotes => {
         const footerElement = document.querySelector(".quote");
@@ -29,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Fetch diary entries
     fetch('diary.txt')
         .then(response => response.text())
         .then(data => {
@@ -48,13 +45,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+    // Add event listeners for search and load-more functionality
     document.getElementById('search').addEventListener('input', searchEntries);
     document.getElementById('load-more').addEventListener('click', displayEntries);
+
+    // Fetch and display RSS feed
+    fetch('/rss.xml') // Adjust the path if necessary
+    .then(response => response.text())
+    .then(text => {
+        console.log('Fetched content:', text);
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+    });
+
+
 });
-
-
-
-
 
 function resetEntries() {
     currentIndex = 0;
@@ -111,3 +117,72 @@ function loadAndScrollToEntry(entryId) {
 
     findAndScroll();
 }
+
+// Function to convert UTC date to EST and format it
+function convertToEST(utcDateStr) {
+    // Parse the UTC date string into a Date object
+    const utcDate = new Date(utcDateStr);
+
+    // Convert to EST time zone
+    const estOffset = -5 * 60; // EST is UTC-5
+    const estDate = new Date(utcDate.getTime() + estOffset * 60 * 1000);
+
+    // Format date as 'Month Day, Year (Day) HH:MM'
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'short',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: 'America/New_York'
+    };
+    
+    const formattedDate = estDate.toLocaleString('en-US', options);
+
+    // Adjust for formatting to match 'Month Day, Year (Day) HH:MM'
+    return formattedDate.replace(',', '').replace(/(\d{1,2} \w+ \d{4}) (\w{3})/, '$1 ($2)');
+}
+
+// Function to fetch and display RSS updates
+async function fetchRSSUpdates() {
+    try {
+        // Fetch the RSS feed
+        const response = await fetch('rss.xml');
+        const xmlText = await response.text();
+
+        // Parse the XML
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+
+        // Get the items from the RSS feed
+        const items = xmlDoc.getElementsByTagName('item');
+        const updateLog = document.getElementById('update-log');
+
+        // Create HTML for each item
+        let html = '';
+        Array.from(items).forEach(item => {
+            const title = item.getElementsByTagName('title')[0].textContent;
+            const link = item.getElementsByTagName('link')[0].textContent;
+            const description = item.getElementsByTagName('description')[0].textContent;
+            const pubDateUTC = item.getElementsByTagName('pubDate')[0].textContent;
+
+            // Convert the publication date to EST
+            const pubDateEST = convertToEST(pubDateUTC);
+
+            html += `<div class="rss-item">
+                        <h3><a href="${link}" target="_blank">${title}</a></h3>
+                        <p><strong>Date Published:</strong> ${pubDateEST}</p>
+                        <p>${description}</p>
+                     </div>`;
+        });
+
+        // Update the #update-log div with the new content
+        updateLog.innerHTML = html;
+    } catch (error) {
+        console.error('Error fetching or parsing RSS feed:', error);
+    }
+}
+
+// Call the function to fetch and display RSS updates on page load
+fetchRSSUpdates();

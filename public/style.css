@@ -96,10 +96,10 @@ a:link, a:visited {
     width: 5px;
   }
   
-  /* Track */
+  /*
   ::-webkit-scrollbar-track {
-
-  }
+    
+  }*/
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
@@ -137,10 +137,9 @@ a:link, a:visited {
     grid-row: 1;
     margin: 10px;
     margin-top: 0px;
-    border-radius: 25px;
+    border-radius: 5px;
     height: 60%;
     border: solid;
-    border-radius: 25px;
     font-family: ledlight;
     border-color: black;
     background-color: rgba(0,0,0,.5);
@@ -404,9 +403,12 @@ input[type="text"]:focus{
     grid-row: 4;
     border: solid red;
 }
+
 .updateLog{
     grid-column: 1/ span 2;
     grid-row: 3/span 2;
+    border-radius:5px;
+    overflow-y:scroll;
     border: solid red;
-    border-radius:25px;
+    padding-left: 20px;
 }

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Cyber K</title>
+        <link>https://cyberk.neocities.org/</link>
+        <description>Updates and latest posts from Cyber K.</description>
+        <language>en-us</language>
+        <ttl>60</ttl> <!-- Time to Live in minutes -->
+
+        <!-- Example of a blog post -->
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12d3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12d3-a456-4266141740sdfs00</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>First Blog Post</title>
+            <link>https://www.myblog.com/first-post</link>
+            <description><![CDATA[This is the summary of the first blog post. <p>Read more <a href="https://www.myblog.com/first-post">here</a>.</p>]]></description>
+            <guid>123e4567-e89b-12dsdfsdf3-a456-426614174000</guid>
+            <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+    </channel>
+</rss>
