@@ -391,10 +391,11 @@ input[type="text"]:focus{
     grid-column: 1/ span 3;
     grid-row: 2;
     padding:20px;
+    padding-top:10px;
     background-color: rgba(0,0,0,.5);
     border: solid black;
-    margin-top:-30px;
-    margin-left: 30px;
+    margin-top:-40px;
+    margin-left: 20px;
     margin-bottom:20px;
     border-radius:5px;
     box-shadow:0 0 3px #ffffff,0 0 7px #ffffff,0 0 10px #fff; 
@@ -424,7 +425,8 @@ input[type="text"]:focus{
     margin-right:30px;
     margin-top:20px;
     padding-left:20px;
-    padding-right:20px;
+    padding-right:30px;
+    margin-bottom:-10px;
     box-shadow:0 0 3px #ffffff,0 0 7px #ffffff,0 0 10px #fff; 
 }
 
