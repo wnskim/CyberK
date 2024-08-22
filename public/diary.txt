@@ -1,17 +1,9 @@
-<div class="diaryHead">Placeholder Title | Dec. 16, 2022 (Fri) 12:12 | Post No. 3</div><br>
-Firsrt diatlak sjdflkjsldkf <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a 
-galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishin
-skdljfosidjf osijdf 
-<p>This is the first entry.<br>It has multiple lines.<br>And even some <strong>bold text</strong>.</p>
 ---
-<div class="diaryHead">Placeholder Title l 23ij9283jr | Dec. 16, 2022 (Fri) 12:12 | Post No. 2</div><br>
-Firsrt diatlak sjdflkjsldkf <br>
-skdljfosidjf osijdf 
-<p>This is the first entry.<br>It has multiple lines.<br>And even some <strong>bold text</strong>.</p>
-<p>This is the second entry.<br><em>It has italics</em> and a list:</p>
-<ul> 
-    <li>Item one</li>
-    <li>Item two</li>
-    <li>Item three</li>
-</ul>
+<div class="diaryHead"><span id="diary_1">Hello World! | Aug. 21, 2024 (Wed) 20:40 | Post No. 1</p></div>
+Rejoice! As the light of my encephalon has been bestowed upon thee, the darkness in thou souls may be extinguished.<br><br>
+My first post on this new (and debatably improved) version of this website… <br>
+I was originally building a professional portfolio, but I got sidetracked and eventually found myself just building another personal blog…<br>
+This new design is hopefully going to be a bit more reflective of the nature of my postings. With the old site, I found that the more “serious” postings were a bit undermined by certain aspects of the design of the website (like the perpetually dancing Hatsune Miku on every page…). My old “persona” hasn’t died, but I feel that this new layout will establish a bit more of a neutral tone for my postings.<br><br>
+I’m also trying to be a bit more “tech-y” with this new website… I’ve started using GitHub, I’ve incorporated a decent amount of JavaScript, and have created an RSS feed so people can be notified of new postings… (although, I’m still getting used to RSS feeds, so expect it to be a bit wonky until I figure it out). <br><br>
+I also felt that reviving my digital journal would be greatly beneficial in my own journey of forming consciousness and critical thinking… I want to form stronger beliefs and become more educated on the world around me, and I’m sure I’ll enjoy looking back at how my thoughts developed… Perhaps in a century, this blog will be studied as has the journals of Kafka or Woolfe or Kerouac… <br>HAHA how pretentious… <br><br>
+Anyways… If you guys have any suggestions for this site, please let me know.
