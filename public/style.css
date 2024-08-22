@@ -303,8 +303,8 @@ a:link, a:visited {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     height:676px;
-    padding-left:10px;
-    padding-right:10px;
+    padding-left:20px;
+    padding-right:20px;
     overflow-y:scroll;
 }
 
