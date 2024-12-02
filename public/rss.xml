@@ -8,6 +8,13 @@
         <ttl>60</ttl> <!-- Time to Live in minutes -->
         <item>
             <title>New Blog Post</title>
+            <link>https://www.cyberk.neocities.org/diary/diary_4</link>
+            <description><![CDATA[New blog post, <a href="/diary.html#diary_4">Thanksgiving Ramblings</a>]]></description>
+            <guid>1733113143</guid> <!--https://www.epochconverter.com/-->
+            <pubDate>Mon, 2 Dec 2024 03:24:00 GMT</pubDate> <!--add 5 hours-->
+        </item>
+        <item>
+            <title>New Blog Post</title>
             <link>https://www.cyberk.neocities.org/diary/diary_3</link>
             <description><![CDATA[New blog post, <a href="/diary.html#diary_3">Love in a Cup</a>]]></description>
             <guid>1726335863</guid> <!--https://www.epochconverter.com/-->
