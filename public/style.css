@@ -68,14 +68,14 @@ a:link, a:visited {
     0 0 10px #ffffff;
 }a:link img{
     border-radius:0px;
-}*/
+}*/​
 
 a:link, a:visited {
     color: red;
     text-decoration: none;
-  }
+}
   
-  a:hover, a:active {
+a:hover, a:active {
     color: hotpink;
     text-decoration: none;
     text-shadow: 
