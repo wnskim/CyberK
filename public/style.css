@@ -70,12 +70,10 @@ a:link, a:visited {
     border-radius:0px;
 }*/​
 
-a:link, a:visited {
+a:link, a:visited, a:link {
     color: red;
     text-decoration: none;
-  }
-  
-  a:hover, a:active {
+  }a:hover, a:active {
     color: hotpink;
     text-decoration: none;
     text-shadow: 
